@@ -1,0 +1,17 @@
+/* -This is the documentation for using functions with this mod, not a tutorial- *\
+
+    ~[unitVariable] call Silence_VR_fnc_getLoadout;~ Does nothing, don't use
+
+    [unitVariable] call Silence_VR_fnc_setLoadout;
+
+    // Dev functions
+
+    [unitVariable, modsetPrefix (string, "")] call Silence_VR_fnc_exportLoadout;
+
+    [modsetPrefix (string, "")] call Silence_VR_fnc_exportUnit;
+
+/* -The above two are called by Silence_VR_fnc_batchExportLoadout, located below- *\
+
+    [modsetPrefix (string, "")] call Silence_VR_fnc_batchExportLoadout;
+
+/* -Expanded documentation can be found in each .sqf file- *\

@@ -2,10 +2,10 @@
     Author: Silence
 
 
-    Usage: [_unit, _modset] call Silence_VR_fnc_setLoadout;
+    Usage: [_unit] call Silence_VR_fnc_setLoadout;
 
 
-    Example: [player, "RHS"] call Silence_VR_fnc_setLoadout;
+    Example: [player] call Silence_VR_fnc_setLoadout;
 
 
     Return Value: None
@@ -16,7 +16,7 @@
 
 */
 
-params ["_unit", "_modset"];
+params ["_unit"];
 
 private _unitType =         typeOf _unit;
 

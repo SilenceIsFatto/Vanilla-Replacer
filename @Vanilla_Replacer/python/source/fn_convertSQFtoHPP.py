@@ -1,7 +1,11 @@
 import os
 import time
 
-cur_dir = os.getcwd()
+#cur_dir = os.getcwd()
+
+cur_dir = "G:\Github Repos\Vanilla-Replacer\Silence_VR_Replace" # REPLACE THIS WITH YOUR OWN PATH!
+
+print(cur_dir)
 
 directories = os.walk(f"{cur_dir}/configs")
 dirpath, dirnames, filenames = next(directories)
@@ -17,6 +21,8 @@ def arrayToSubstrings(in_file):
             #print(filedata_open)
             file.write(filedata_open)
             file.close()
+
+            return ["Replaced stuff", find, replace]
 
     replaceThings("'[", "")
     replaceThings("]'", "")

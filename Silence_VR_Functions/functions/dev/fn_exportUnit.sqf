@@ -1,8 +1,6 @@
-params ["_unit", "_syncedUnit", "_loadout", "_modset"];
+params ["_unit", "_syncedUnit", "_loadout", "_modset", "_faction"];
 
 private _unitType = typeOf _unit;
-
-private _faction =          [(configFile >> "CfgVehicles" >> typeOf _syncedUnit), "faction", ""] call BIS_fnc_returnConfigEntry;
 
 _unitFinal = formatText 
 [
