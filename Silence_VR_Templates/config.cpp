@@ -23,7 +23,7 @@ class cfgPatches
 
 class CfgLoadoutReplacers
 {
-    #include "configs\OPFOR\CfgLoadouts.hpp"
+    #include "configs\OPF_F\CfgLoadouts.hpp"
 };
 
 class CfgUnitReplacers
