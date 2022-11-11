@@ -3,7 +3,7 @@ import subprocess
 import os
 import time
 
-cur_dir = "C:/Users/crimz/Downloads/Vanilla-Replacer-main/Vanilla-Replacer-main/" # REPLACE THIS WITH YOUR OWN PATH!
+#cur_dir = "G:\Github Repos\Vanilla-Replacer" # REPLACE THIS WITH YOUR OWN PATH!
 
 def arrayToSubstrings(in_file):
 
@@ -55,11 +55,17 @@ def writeLoadout(file_path, file_name, file_data):
 
 def writeConfig(file_path, file_name, file_data):
 
+    def writeCfgPatches(file_data):
+        with open(f"{file_path}/{file_name}", "w+") as config:
+            cfgData = config.read()
+            config.seek(0)
+            config.truncate()
+            config.write(file_data)
+            config.close()
 
     def replaceConfigLines(stringToAppend):
-        lineNum = 20
+        lineNum = 20 # we can assume that the line will always be 20, as cfgPatches is always the same
         with open(f"{file_path}/{file_name}", "r+") as config:
-            # cfgData = config.read()
             cfgLines = config.readlines()
             cfgLines[:lineNum] = stringToAppend
             config.writelines(cfgLines)
@@ -76,7 +82,7 @@ def writeConfig(file_path, file_name, file_data):
     # def locateConfig():
 
     # opening folder
-    classArr = ["class CfgLoadoutReplacers\n{\n\n"]
+    classArr = ["\n\n\nclass CfgLoadoutReplacers\n{\n\n"]
     with open(f"{file_path}/{file_name}", "a+") as cfg:
         data = cfg.read()
         cfg.seek(0)
@@ -84,7 +90,6 @@ def writeConfig(file_path, file_name, file_data):
         # loop through each dir and get all dirpaths, names and filenames
         directories = os.walk(f"{file_path}")
         dirpath, dirnames, filenames = next(directories)
-
 
         # loop through each dir
         for i in range(len(dirnames)):
@@ -95,9 +100,14 @@ def writeConfig(file_path, file_name, file_data):
                 for k in os.listdir(f"{file_path}/{dirnames[i]}/{subFolders}"):
                     # print(k)
                     if k.endswith(".hpp"):
-                        filepath = f"#include \"configs\{subFolders}\{k}\""
+                        # filepath = f"#include \"configs\{subFolders}\{k}\""
+                        filepath = f"#include \"configs\\{subFolders}\\{k}\""
 
                         classArr.append(filepath)
+
+        # write cfgPatches to file
+        #config.write(file_data)
+        #config.close()
 
     classString = f"{classArr[0]}"
 
@@ -109,8 +119,9 @@ def writeConfig(file_path, file_name, file_data):
 
     print(classString)
 
+    writeCfgPatches(file_data)
     replaceConfigLines(classString)
+    clearWhitespace(f"{file_path}/{file_name}")
     
 
     # print(classArr)
-writeConfig("C:/Users/crimz/Downloads/Vanilla-Replacer-main/Vanilla-Replacer-main/Silence_VR_Templates", "config.cpp", "")

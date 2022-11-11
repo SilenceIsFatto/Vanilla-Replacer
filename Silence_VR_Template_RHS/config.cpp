@@ -1,6 +1,6 @@
 class cfgPatches
 {
-	class Silence_VR_Templates
+	class Silence_VR_Template_RHS
 	{
 		units[] = 
 		{
@@ -16,9 +16,7 @@ class cfgPatches
 };
 class CfgLoadoutReplacers
 {
-	#include "configs\BLUFOR\cfgLoadouts.hpp"
-	#include "configs\CIV\cfgLoadouts.hpp"
 	#include "configs\CORE\cfgUnits.hpp"
-	#include "configs\IND\cfgLoadouts.hpp"
 	#include "configs\OPF_F\cfgLoadouts.hpp"
+	#include "configs\OPF_T_F\cfgLoadouts.hpp"
 }

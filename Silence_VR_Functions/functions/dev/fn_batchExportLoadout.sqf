@@ -1,5 +1,7 @@
 params ["_modset", ["_faction", ""], "_path"];
 
+// make path a CBA option
+
 _loadoutArray = [];
 _unitsArray = [];
 
@@ -47,25 +49,25 @@ _unitsArrayFinal = formatText
 _cfgPatches = formatText 
 [
 	"
-	class cfgPatches
+class cfgPatches
+{
+	class Silence_VR_Template_%1
 	{
-		class Silence_VR_Template_%1
+		units[] = 
 		{
-			units[] = 
-			{
-				""
-			};
-			weapons[] = 
-			{
-				""
-			};
-			requiredVersion = 0.1;
-			requiredAddons[] = {'A3_Characters_F'};
+			""""
 		};
+		weapons[] = 
+		{
+			""""
+		};
+		requiredVersion = 0.1;
+		requiredAddons[] = {""A3_Characters_F""};
 	};
+};
+
 	",
-	_modset,
-	_faction
+	_modset
 ];
 
 //private _path = "G:\Github Repos\Vanilla-Replacer";
@@ -77,6 +79,6 @@ _pathFinal = formatText["%1\configs\%2", _path, _faction];
 
 ['vr_python.writeLoadout', [(str _path + "\configs\CORE"), "cfgUnits.hpp", str _unitsArrayFinal]] call py3_fnc_callExtension;
 
-["vr_python.writeLoadout", [(str _path), "config.cpp", str _loadoutArrayFinal]] call py3_fnc_callExtension; // do this thru python
+["vr_python.writeConfig", [(str _path), "config.cpp", str _cfgPatches]] call py3_fnc_callExtension; // do this thru python
 
 // do the config.cpp ^

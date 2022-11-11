@@ -20,8 +20,8 @@ params ["_unit"];
 
 private _unitType =         typeOf _unit;
 
-private _faction =          [(configFile >> "CfgUnitReplacers" >> _unitType), "factionType", ""] call BIS_fnc_returnConfigEntry;
-private _loadout =          [(configFile >> "CfgUnitReplacers" >> _unitType), "loadout", ""] call BIS_fnc_returnConfigEntry;
+private _faction =          [(configFile >> "CfgLoadoutReplacers" >> _unitType), "factionType", ""] call BIS_fnc_returnConfigEntry;
+private _loadout =          [(configFile >> "CfgLoadoutReplacers" >> _unitType), "loadout", ""] call BIS_fnc_returnConfigEntry;
 
 if                          (_faction isEqualTo "") exitWith {diag_log "VANILLA REPLACER: Unit faction wasn't set, possibly not intended to be replaced"};
 if                          (_loadout isEqualTo "") exitWith {diag_log "VANILLA REPLACER: Unit loadout wasn't set, possibly not intended to be replaced"};
