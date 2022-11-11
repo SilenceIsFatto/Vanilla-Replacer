@@ -13,7 +13,6 @@ def arrayToSubstrings(in_file):
             filedata_open = filedata.replace(find, replace)
             file.seek(0)
             file.truncate(0)
-            #print(filedata_open)
             file.write(filedata_open)
             file.close()
 
@@ -36,15 +35,12 @@ def clearWhitespace(in_file):
         file.close()
 
 def writeLoadout(file_path, file_name, file_data):
-    #data = getDataFromClipboard()
     os.makedirs(file_path, exist_ok=True)
     with open(f"{file_path}/{file_name}", "a+") as cfg:
         data = cfg.read()
         cfg.seek(0, 0)
         cfg.write('\n')
         cfg.write(data)
-        # cfg.seek(0)
-        # cfg.truncate(0)
         cfg.write(file_data)
         cfg.close()
         time.sleep(10)
@@ -71,15 +67,6 @@ def writeConfig(file_path, file_name, file_data):
             config.writelines(cfgLines)
             config.close()
 
-            # lineNumber = 20
-            # for i, line in enumerate(cfgData):
-            #     if i == lineNumber:
-            #         config.seek(lineNumber)
-            #         config.truncate()
-
-            #         config.write(stringToAppend)
-
-    # def locateConfig():
 
     # opening folder
     classArr = ["\n\n\nclass CfgLoadoutReplacers\n{\n\n"]
@@ -111,8 +98,9 @@ def writeConfig(file_path, file_name, file_data):
 
     classString = f"{classArr[0]}"
 
+    # get every elemt after the first element
     for k in classArr[1:]:
-
+        # join each element: k  onto the string
         classString += f"\t{k}\n"
 
     classString += "}"
