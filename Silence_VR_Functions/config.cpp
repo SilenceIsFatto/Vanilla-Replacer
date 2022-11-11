@@ -25,12 +25,6 @@ class CfgFunctions
 	{
 		class functions
 		{
-			// functions
-			class setLoadout 
-			{
-				file="\Silence_VR_Functions\functions\fn_setLoadout.sqf";
-				postInit=0;
-			};
 			// functions/dev
 			class exportLoadout
 			{
@@ -52,4 +46,10 @@ class CfgFunctions
 			
 		};
 	};
+};
+
+class Extended_PreInit_EventHandlers {
+    class Silence_VR_GetPath {
+        init = "call compile preprocessFileLineNumbers 'Silence_VR_Functions\XEH_preInit.sqf'";
+    };
 };

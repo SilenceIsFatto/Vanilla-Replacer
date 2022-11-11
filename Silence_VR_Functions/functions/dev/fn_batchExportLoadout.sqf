@@ -1,4 +1,7 @@
-params ["_modset", ["_faction", ""], "_path"];
+params ["_modset", ["_faction", ""]];
+if !(player getVariable ["Silence_VR_AllowPython",false]) exitWith {hint "Allow python isn't enabled in CBA settings. Aborting!"}; // might aswell make a toggle off
+
+private _path = player getVariable ["Silence_VR_Path","C:\Documents\Vanilla_Replacer_Mod"];
 
 // make path a CBA option
 
@@ -79,6 +82,4 @@ _pathFinal = formatText["%1\configs\%2", _path, _faction];
 
 ['vr_python.writeLoadout', [(str _path + "\configs\CORE"), "cfgUnits.hpp", str _unitsArrayFinal]] call py3_fnc_callExtension;
 
-["vr_python.writeConfig", [(str _path), "config.cpp", str _cfgPatches]] call py3_fnc_callExtension; // do this thru python
-
-// do the config.cpp ^
+["vr_python.writeConfig", [(str _path), "config.cpp", str _cfgPatches]] call py3_fnc_callExtension;

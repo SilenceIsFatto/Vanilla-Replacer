@@ -183,3 +183,113 @@
         factionType = "Silence_VR_RHS_OPF_F";
         loadout = "Silence_VR_RHS_rhs_vdv_medic";
     }
+    class O_GEN_Soldier_F
+    {
+        factionType = "Silence_VR_RHS_OPF_GEN_F";
+        loadout = "Silence_VR_RHS_O_GEN_Soldier_F";
+    }
+    class O_GEN_Commander_F
+    {
+        factionType = "Silence_VR_RHS_OPF_GEN_F";
+        loadout = "Silence_VR_RHS_O_GEN_Commander_F";
+    }
+    class I_C_Soldier_Bandit_7_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_rifleman_akms";
+    }
+    class I_C_Soldier_Bandit_3_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_machinegunner";
+    }
+    class I_C_Soldier_Bandit_2_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_grenadier_rpg";
+    }
+    class I_C_Pilot_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_crew";
+    }
+    class I_C_Soldier_Bandit_5_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_scout";
+    }
+    class I_C_Soldier_Bandit_6_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_grenadier";
+    }
+    class I_C_Soldier_Bandit_1_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_medic";
+    }
+    class I_C_Soldier_Bandit_8_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_saboteur";
+    }
+    class I_C_Soldier_Bandit_4_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_rifleman_vz58";
+    }
+    class I_C_Soldier_Para_7_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_rifleman_mp44";
+    }
+    class I_C_Soldier_Para_2_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_rifleman_akm";
+    }
+    class I_C_Helipilot_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_crew";
+    }
+    class I_C_Soldier_Para_3_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_medic";
+    }
+    class I_C_Soldier_Para_4_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_machinegunner";
+    }
+    class I_C_Soldier_Para_6_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_grenadier";
+    }
+    class I_C_Soldier_Camo_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_warlord";
+    }
+    class I_C_Soldier_base_unarmed_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_rifleman";
+    }
+    class I_C_Soldier_Para_8_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_saboteur";
+    }
+    class I_C_Soldier_Para_1_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_rifleman_aksu";
+    }
+    class I_C_Soldier_Para_5_F
+    {
+        factionType = "Silence_VR_RHS_IND_C_F";
+        loadout = "Silence_VR_RHS_rhsgref_nat_pmil_grenadier_rpg";
+    }

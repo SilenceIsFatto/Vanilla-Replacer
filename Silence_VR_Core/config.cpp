@@ -19,6 +19,24 @@ class cfgPatches
 #define true 1
 #define false 0
 
+class CfgFunctions
+{
+	class Silence_VR
+	{
+		class functions
+		{
+
+			// functions
+			class setLoadout 
+			{
+				file="\Silence_VR_Core\functions\fn_setLoadout.sqf";
+				postInit=0;
+			};
+			
+		};
+	};
+};
+
 class Extended_Init_EventHandlers {
     class CAManBase 
 	{
@@ -34,5 +52,4 @@ class cfgVehicles
 	class CAManBase;
 
 	class Silence_VR_Soldier_Base : CAManBase {};
-
 };
