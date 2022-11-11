@@ -1,5 +1,7 @@
 # Vanilla-Replacer
 
+~- NOT COMPLETE, READ THE DOCUMENTATION.TXT FOR MORE INFO ~-
+
 This project combines both Python and SQF to create a loadout exporter/overwriter.
 
 All you need to do is put down your base unit in the editor (E.g CSAT Rifleman), and copy paste it. 
