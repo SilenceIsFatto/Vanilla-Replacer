@@ -3,7 +3,7 @@ import subprocess
 import os
 import time
 
-cur_dir = "G:\Github Repos\Vanilla-Replacer" # REPLACE THIS WITH YOUR OWN PATH!
+cur_dir = "C:/Users/crimz/Downloads/Vanilla-Replacer-main/Vanilla-Replacer-main/" # REPLACE THIS WITH YOUR OWN PATH!
 
 def arrayToSubstrings(in_file):
 
@@ -22,14 +22,6 @@ def arrayToSubstrings(in_file):
     replaceThings("},", "}")
     replaceThings("'", '"')
 
-    # for i in range(len(dirnames)):
-    #     #in_file_path = f"{cur_dir}/configs/cfgUnits.hpp"
-    #     #arrayToSubstrings(in_file_path)
-    #     for filename_sub in os.listdir(f"{cur_dir}/configs/{dirnames[i]}"):
-    #         if filename_sub.endswith(".hpp"):
-    #             in_file_path = f"{cur_dir}/configs/{dirnames[i]}/{filename_sub}"
-    #             arrayToSubstrings(in_file_path)
-    #             time.sleep(0.1)
     return 1
 
 def clearWhitespace(in_file):
@@ -58,9 +50,31 @@ def writeLoadout(file_path, file_name, file_data):
         time.sleep(10)
         arrayToSubstrings(f"{file_path}/{file_name}")
         clearWhitespace(f"{file_path}/{file_name}")
+
     return 1
 
 def writeConfig(file_path, file_name, file_data):
+
+
+    def replaceConfigLines(stringToAppend):
+        lineNum = 20
+        with open(f"{file_path}/{file_name}", "r+") as config:
+            # cfgData = config.read()
+            cfgLines = config.readlines()
+            cfgLines[:lineNum] = stringToAppend
+            config.writelines(cfgLines)
+            config.close()
+
+            # lineNumber = 20
+            # for i, line in enumerate(cfgData):
+            #     if i == lineNumber:
+            #         config.seek(lineNumber)
+            #         config.truncate()
+
+            #         config.write(stringToAppend)
+
+    # def locateConfig():
+
     # opening folder
     classArr = ["class CfgLoadoutReplacers\n{\n\n"]
     with open(f"{file_path}/{file_name}", "a+") as cfg:
@@ -95,4 +109,8 @@ def writeConfig(file_path, file_name, file_data):
 
     print(classString)
 
-writeConfig("G:\Github Repos\Vanilla-Replacer\Silence_VR_Templates", "config.cpp", "")
+    replaceConfigLines(classString)
+    
+
+    # print(classArr)
+writeConfig("C:/Users/crimz/Downloads/Vanilla-Replacer-main/Vanilla-Replacer-main/Silence_VR_Templates", "config.cpp", "")
