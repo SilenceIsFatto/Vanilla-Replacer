@@ -5,8 +5,6 @@ import time
 
 cur_dir = "G:\Github Repos\Vanilla-Replacer" # REPLACE THIS WITH YOUR OWN PATH!
 
-print(cur_dir)
-
 def arrayToSubstrings(in_file):
 
     def replaceThings(find,replace):
@@ -45,23 +43,14 @@ def clearWhitespace(in_file):
                 file.write(line)
         file.close()
 
-clearWhitespace("G:\Github Repos\Vanilla-Replacer\Silence_VR_Template_RHS\configs\OPF_F\cfgLoadouts.hpp")
-
-# def getDataFromClipboard():
-
-#     data = subprocess.getoutput("powershell.exe -Command Get-Clipboard")
-#     return data
-
-# commented out due to security concerns, was originally meant to retrieve the config that gets exported by the SQF script
-
 def writeLoadout(file_path, file_name, file_data):
     #data = getDataFromClipboard()
     os.makedirs(file_path, exist_ok=True)
     with open(f"{file_path}/{file_name}", "a+") as cfg:
-        originalContent = cfg.read()
+        data = cfg.read()
         cfg.seek(0, 0)
         cfg.write('\n')
-        cfg.write(originalContent)
+        cfg.write(data)
         # cfg.seek(0)
         # cfg.truncate(0)
         cfg.write(file_data)
@@ -70,3 +59,22 @@ def writeLoadout(file_path, file_name, file_data):
         arrayToSubstrings(f"{file_path}/{file_name}")
         clearWhitespace(f"{file_path}/{file_name}")
     return 1
+
+def writeConfig(file_path, file_name, file_data):
+    with open(f"{file_path}/{file_name}", "a+") as cfg:
+        data = cfg.read()
+        cfg.seek(0)
+
+        directories = os.walk(f"{file_path}")
+        dirpath, dirnames, filenames = next(directories)
+
+        for i in range(len(dirnames)):
+            #print(dirnames)
+            #print(os.listdir(f"{file_path}/{dirnames[i]}"))
+            for filename_sub in os.listdir(f"{file_path}/{dirnames[i]}"):
+                print(filename_sub)
+                if filename_sub.endswith(".hpp"):
+                    string = f"#include {file_path}"
+                    print(string)
+
+writeConfig("G:\Github Repos\Vanilla-Replacer\Silence_VR_Templates", "config.cpp", "")

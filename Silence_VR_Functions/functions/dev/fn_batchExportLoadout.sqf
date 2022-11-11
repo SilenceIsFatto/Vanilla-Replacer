@@ -46,7 +46,7 @@ _unitsArrayFinal = formatText
 
 _cfgPatches = formatText 
 [
-	'
+	"
 	class cfgPatches
 	{
 		class Silence_VR_Template_%1
@@ -60,20 +60,10 @@ _cfgPatches = formatText
 				""
 			};
 			requiredVersion = 0.1;
-			requiredAddons[] = {"A3_Characters_F"};
+			requiredAddons[] = {'A3_Characters_F'};
 		};
 	};
-
-	class CfgLoadoutReplacers
-	{
-		#include "configs\%2\CfgLoadouts.hpp"
-	};
-
-	class CfgUnitReplacers
-	{
-		#include "configs\%2\cfgUnits.hpp"
-	};
-	',
+	",
 	_modset,
 	_faction
 ];
@@ -87,6 +77,6 @@ _pathFinal = formatText["%1\configs\%2", _path, _faction];
 
 ['vr_python.writeLoadout', [(str _path + "\configs\CORE"), "cfgUnits.hpp", str _unitsArrayFinal]] call py3_fnc_callExtension;
 
-["vr_python.writeLoadout", [(str _path), "config.cpp", str _loadoutArrayFinal]] call py3_fnc_callExtension;
+["vr_python.writeLoadout", [(str _path), "config.cpp", str _loadoutArrayFinal]] call py3_fnc_callExtension; // do this thru python
 
 // do the config.cpp ^

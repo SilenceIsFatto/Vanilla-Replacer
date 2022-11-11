@@ -25,7 +25,6 @@ class CfgFunctions
 	{
 		class functions
 		{
-
 			// functions
 			class setLoadout 
 			{
