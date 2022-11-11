@@ -1,7 +1,7 @@
 import os
 import time
 
-#cur_dir = os.getcwd()
+#cur_dir = os.path.abspath(__file__) #havent tested. Could work (finds the absolute path of the file)
 
 cur_dir = "G:\Github Repos\Vanilla-Replacer\Silence_VR_Replace" # REPLACE THIS WITH YOUR OWN PATH!
 
