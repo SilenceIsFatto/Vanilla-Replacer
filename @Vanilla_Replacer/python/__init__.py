@@ -61,20 +61,38 @@ def writeLoadout(file_path, file_name, file_data):
     return 1
 
 def writeConfig(file_path, file_name, file_data):
+    # opening folder
+    classArr = ["class CfgLoadoutReplacers\n{\n\n"]
     with open(f"{file_path}/{file_name}", "a+") as cfg:
         data = cfg.read()
         cfg.seek(0)
 
+        # loop through each dir and get all dirpaths, names and filenames
         directories = os.walk(f"{file_path}")
         dirpath, dirnames, filenames = next(directories)
 
+
+        # loop through each dir
         for i in range(len(dirnames)):
-            #print(dirnames)
-            #print(os.listdir(f"{file_path}/{dirnames[i]}"))
-            for filename_sub in os.listdir(f"{file_path}/{dirnames[i]}"):
-                print(filename_sub)
-                if filename_sub.endswith(".hpp"):
-                    string = f"#include {file_path}"
-                    print(string)
+            # get each subfolder
+            for subFolders in os.listdir(f"{file_path}/{dirnames[i]}"):
+                print(subFolders)
+                # get each file in them subfolders
+                for k in os.listdir(f"{file_path}/{dirnames[i]}/{subFolders}"):
+                    # print(k)
+                    if k.endswith(".hpp"):
+                        filepath = f"#include \"configs\{subFolders}\{k}\""
+
+                        classArr.append(filepath)
+
+    classString = f"{classArr[0]}"
+
+    for k in classArr[1:]:
+
+        classString += f"\t{k}\n"
+
+    classString += "}"
+
+    print(classString)
 
 writeConfig("G:\Github Repos\Vanilla-Replacer\Silence_VR_Templates", "config.cpp", "")
