@@ -53,8 +53,7 @@ def writeLoadout(file_path, file_name, file_data):
 
     return 1
 
-def writeConfig(file_path, file_name, file_data):
-
+def writeConfig(file_path, file_name):
 
     def replaceConfigLines(stringToAppend):
         lineNum = 20
@@ -65,18 +64,9 @@ def writeConfig(file_path, file_name, file_data):
             config.writelines(cfgLines)
             config.close()
 
-            # lineNumber = 20
-            # for i, line in enumerate(cfgData):
-            #     if i == lineNumber:
-            #         config.seek(lineNumber)
-            #         config.truncate()
-
-            #         config.write(stringToAppend)
-
-    # def locateConfig():
 
     # opening folder
-    classArr = ["class CfgLoadoutReplacers\n{\n\n"]
+    classArr = ["\nclass CfgLoadoutReplacers\n{\n\n"]
     with open(f"{file_path}/{file_name}", "a+") as cfg:
         data = cfg.read()
         cfg.seek(0)
@@ -113,4 +103,4 @@ def writeConfig(file_path, file_name, file_data):
     
 
     # print(classArr)
-writeConfig("C:/Users/crimz/Downloads/Vanilla-Replacer-main/Vanilla-Replacer-main/Silence_VR_Templates", "config.cpp", "")
+writeConfig("C:/Users/crimz/Downloads/Vanilla-Replacer-main/Vanilla-Replacer-main/Silence_VR_Templates", "config.cpp")
