@@ -12,12 +12,8 @@
 
 /* -The above two are called by Silence_VR_fnc_batchExportLoadout, located below- *\
 
-<<<<<<< Updated upstream:Silence_VR_Functions/documentation.txt
-    [modsetPrefix (string, "")] call Silence_VR_fnc_batchExportLoadout;
-=======
-    [modsetPrefix (string, ""), factionClassname (string, "", Optional), pathToFile (string, "")] call Silence_VR_fnc_batchExportLoadout;
+    [modsetPrefix (string, ""), factionClassname (string, "", Optional)] call Silence_VR_fnc_batchExportLoadout;
 
     example ^ : ["RHS", ""] call Silence_VR_fnc_batchExportLoadout;
->>>>>>> Stashed changes:documentation.txt
 
 /* -Expanded documentation can be found in each .sqf file- *\

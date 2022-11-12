@@ -48,7 +48,7 @@ _loadout append [[_primary, _primaryAcc], [_secondary, _secondaryAcc], [_launche
 _loadout = formatText 
 [
         "
-        class Silence_VR_%17_%18
+        class %19_%17_%18
         {
 
             primary[] = {%1};
@@ -90,7 +90,8 @@ _loadout = formatText
 		str _mags,
 		str _linkedItems,
         _modset,
-        typeOf _unit
+        typeOf _unit,
+        _tag
 ];
 
 copyToClipboard str _loadout;

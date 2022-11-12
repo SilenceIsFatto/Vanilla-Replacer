@@ -9,7 +9,8 @@ def packAllPbo(addonbuilder,in_path,out_path):
     #for i in range(len(dirnames)):
     for folder in os.listdir(in_path):
         isFile = os.path.isfile(f"{folder}")
-        notAllowed = ["@", ".git", ".vscode", "Silence_VR_Templates"]
+        notAllowed = ["@", ".git", ".vscode"]
+        #reiterate through the notAllowed extensions or keywords, stops things like mod folders being packed
         for folderName in notAllowed:
             if (folderName in str(folder)):
                 isFile = True
