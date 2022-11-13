@@ -15,6 +15,10 @@ class cfgPatches
 	};
 };
 
+#include "dialogs\defines.hpp"
+#include "dialogs\rsc_dev_hud.hpp"
+#include "cfgUserActions.hpp"
+
 #define AUTHOR "Silence"
 #define true 1
 #define false 0
@@ -43,7 +47,20 @@ class CfgFunctions
 				file="\Silence_VR_Functions\functions\dev\fn_exportUnit.sqf";
 				postInit=0;
 			};
-			
+			class listFiles
+			{
+				file="\Silence_VR_Functions\functions\dialogs\fn_listFiles.sqf";
+				postInit=0;
+			};
+			class openFolderBrowser
+			{
+				file="\Silence_VR_Functions\functions\dialogs\fn_openFolderBrowser.sqf";
+				postInit=0;
+			};
+			class openDialog
+			{
+				file="\Silence_VR_Functions\functions\dialogs\fn_openDialog.sqf";
+			};
 		};
 	};
 };
