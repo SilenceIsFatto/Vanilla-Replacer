@@ -85,7 +85,6 @@ def writeConfig(file_path, file_name, file_data):
                 print(subFolders)
                 # get each file in them subfolders
                 for k in os.listdir(f"{file_path}/{dirnames[i]}/{subFolders}"):
-                    # print(k)
                     if k.endswith(".hpp"):
                         # filepath = f"#include \"configs\{subFolders}\{k}\""
                         filepath = f"#include \"configs\\{subFolders}\\{k}\""

@@ -26,6 +26,7 @@ private _loadout =          [(configFile >> "CfgLoadoutReplacers" >> _unitType),
 if                          (_faction isEqualTo "") exitWith {diag_log "VANILLA REPLACER: Unit faction wasn't set, possibly not intended to be replaced"};
 if                          (_loadout isEqualTo "") exitWith {diag_log "VANILLA REPLACER: Unit loadout wasn't set, possibly not intended to be replaced"};
 if                          (is3DEN) exitWith {};
+if                          !( (profileNamespace getVariable ["Silence_VR_canSetLoadout", true]) ) exitWith {};
 
 // Get loadout
 private _primary =          getArray (configFile >> "CfgLoadoutReplacers" >> _faction >> _loadout >> "primary");

@@ -6,14 +6,14 @@
 
     // Dev functions
 
-    [unitVariable, modsetPrefix (string, "")] call Silence_VR_fnc_exportLoadout;
+    [unitVariable, modsetPrefix (string, ""), index (integer, 0)] call Silence_VR_fnc_exportLoadout;
 
-    [modsetPrefix (string, "")] call Silence_VR_fnc_exportUnit;
+    [modsetPrefix (string, ""), index (integer, 0)] call Silence_VR_fnc_exportUnit;
 
 /* -The above two are called by Silence_VR_fnc_batchExportLoadout, located below- *\
 
     [modsetPrefix (string, ""), factionClassname (string, "", Optional)] call Silence_VR_fnc_batchExportLoadout;
 
-    example ^ : ["RHS", ""] call Silence_VR_fnc_batchExportLoadout;
+    example ^ : ["RHS"] call Silence_VR_fnc_batchExportLoadout;
 
 /* -Expanded documentation can be found in each .sqf file- *\

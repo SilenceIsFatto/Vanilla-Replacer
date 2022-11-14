@@ -20,4 +20,4 @@ def packAllPbo(addonbuilder,in_path,out_path):
         else:
             print(f"{folder} was aborted")
 
-packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","G:\Github Repos\Vanilla-Replacer\\addons_core", "G:\Github Repos\Vanilla-Replacer\@Vanilla_Replacer\Addons")
+packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","G:\Github Repos\Vanilla-Replacer\\addons_templates", "G:\Github Repos\Vanilla-Replacer\@Vanilla_Replacer_Templates\Addons")

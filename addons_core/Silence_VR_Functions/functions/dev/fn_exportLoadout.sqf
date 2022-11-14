@@ -5,7 +5,7 @@
     Usage: [_unit, _modset] call Silence_VR_fnc_exportLoadout;
 
 
-    Example: [player, "RHS"] call Silence_VR_fnc_exportLoadout;
+    Example: [player, "RHS", _index] call Silence_VR_fnc_exportLoadout;
 
 
     Return Value: None
@@ -17,7 +17,7 @@
 
 */
 
-params ["_unit", "_modset"];
+params ["_unit", "_modset", "_index"];
 
 private _loadout = [];
 
@@ -45,10 +45,10 @@ private _mags = magazines _unit;
 
 _loadout append [[_primary, _primaryAcc], [_secondary, _secondaryAcc], [_launcher, _launcherAcc], [_headgear, _uniform, _vest, _backpack, _facewear, _nvg], _items, _linkedItems];
 
-_loadout = formatText 
+_loadout = formatText
 [
         "
-        class %19_%17_%18
+        class %19_%17_%18_%20
         {
 
             primary[] = {%1};
@@ -91,9 +91,10 @@ _loadout = formatText
 		str _linkedItems,
         _modset,
         typeOf _unit,
-        _tag
+        _tag,
+        _index
 ];
 
-copyToClipboard str _loadout;
+_loadoutClassname = format["%1_%2_%3_%4", _tag, _modset, typeOf _unit, _index];
 
-_loadout
+[_loadout, _loadoutClassname]

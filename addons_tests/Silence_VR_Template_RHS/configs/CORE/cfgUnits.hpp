@@ -293,3 +293,43 @@
         factionType = "Silence_VR_RHS_IND_C_F";
         loadout = "Silence_VR_RHS_rhsgref_nat_pmil_grenadier_rpg";
     }
+    class B_CTRG_Miller_F
+    {
+        factionType = "Silence_VR_RHS_BLU_CTRG_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_cso_light_0";
+    }
+    class O_V_Soldier_Exp_ghex_F
+    {
+        factionType = "Silence_VR_RHS_OPF_T_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_cso_grenadier_0";
+    }
+    class O_V_Soldier_JTAC_ghex_F
+    {
+        factionType = "Silence_VR_RHS_OPF_T_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_jtac_1";
+    }
+    class O_V_Soldier_M_ghex_F
+    {
+        factionType = "Silence_VR_RHS_OPF_T_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_marksman_2";
+    }
+    class O_V_Soldier_ghex_F
+    {
+        factionType = "Silence_VR_RHS_OPF_T_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_cso_light_3";
+    }
+    class O_V_Soldier_Medic_ghex_F
+    {
+        factionType = "Silence_VR_RHS_OPF_T_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_sarc_4";
+    }
+    class O_V_Soldier_LAT_ghex_F
+    {
+        factionType = "Silence_VR_RHS_OPF_T_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_cso_light_5";
+    }
+    class O_V_Soldier_TL_ghex_F
+    {
+        factionType = "Silence_VR_RHS_OPF_T_F";
+        loadout = "Silence_VR_RHS_rhsusf_socom_marsoc_elementleader_6";
+    }
