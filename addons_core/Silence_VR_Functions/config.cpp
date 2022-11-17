@@ -11,7 +11,7 @@ class cfgPatches
 			""
 		};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Data_F"};
+		requiredAddons[] = {"Silence_VR_Core"};
 	};
 };
 

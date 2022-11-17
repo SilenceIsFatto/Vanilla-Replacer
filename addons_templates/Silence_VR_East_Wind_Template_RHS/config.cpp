@@ -11,7 +11,7 @@ class cfgPatches
 			""
 		};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Characters_F"};
+		requiredAddons[] = {"Silence_VR_Core"};
 	};
 };
 class CfgLoadoutReplacers

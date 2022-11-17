@@ -1,8 +1,8 @@
 params ["_modset", ["_faction", ""], ["_useSync", false]];
-if !(profileNamespace getVariable ["Silence_VR_AllowPython",false]) exitWith {hint "Allow python isn't enabled in CBA settings. Aborting!"}; // might aswell make a toggle off
+if !(player getVariable ["Silence_VR_AllowPython",false]) exitWith {hint "Allow python isn't enabled in CBA settings. Aborting!"}; // might aswell make a toggle off
 
-private _path = profileNamespace getVariable ["Silence_VR_Path","C:\Documents\Vanilla_Replacer_Mod"];
-private _tag = profileNamespace getVariable ["Silence_VR_Tag","My_Mod"];
+private _path = player getVariable ["Silence_VR_Path","C:\Documents\Vanilla_Replacer_Mod"];
+private _tag = player getVariable ["Silence_VR_Tag","My_Mod"];
 
 // make path a CBA option
 
@@ -81,7 +81,7 @@ class cfgPatches
 			""""
 		};
 		requiredVersion = 0.1;
-		requiredAddons[] = {""A3_Characters_F""};
+		requiredAddons[] = {""Silence_VR_Core""};
 	};
 };
 

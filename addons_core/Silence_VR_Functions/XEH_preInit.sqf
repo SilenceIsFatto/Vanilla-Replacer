@@ -23,7 +23,7 @@ ADDON = true;
     nil, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {  
         params ["_value"];
-		profileNamespace setVariable ["Silence_VR_AllowPython",_value,true];
+		player setVariable ["Silence_VR_AllowPython",_value,true];
     }
 ] call CBA_fnc_addSetting;
 
@@ -36,7 +36,7 @@ ADDON = true;
     nil, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {  
         params ["_value"];
-		profileNamespace setVariable ["Silence_VR_Path",_value,true];
+		player setVariable ["Silence_VR_Path",_value,true];
     }
 ] call CBA_fnc_addSetting;
 
@@ -49,6 +49,6 @@ ADDON = true;
     nil, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {  
         params ["_value"];
-		profileNamespace setVariable ["Silence_VR_Tag",_value,true];
+		player setVariable ["Silence_VR_Tag",_value,true];
     }
 ] call CBA_fnc_addSetting;
